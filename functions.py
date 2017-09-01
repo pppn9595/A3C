@@ -13,7 +13,7 @@ def send_mail(fromaddr, username, password, smtp, to, subject, message):
     server.quit()
 
 def process_frame(frame, size, reshape = True):
-    frame = frame[32:, 10:-10] # crop
+    #frame = frame[32:, 10:-10] # crop
     frame = resize(frame, size, mode = 'constant')
     frame = rgb2gray(frame)
     frame = rescale_intensity(frame, out_range = (0, 255))
